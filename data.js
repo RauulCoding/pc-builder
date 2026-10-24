@@ -2,15 +2,15 @@
 // (scraped from PCPartPicker), loaded live from GitHub through the jsDelivr CDN.
 const DATA_URL = "https://cdn.jsdelivr.net/gh/docyx/pc-part-dataset@main/data/json/";
 
-// Each category: German label, file name in the dataset, short icon text and color
+// Each category: German label, file name in the dataset and short icon text
 const categories = {
-  cpu: { label: "Prozessor", file: "cpu", icon: "CPU", color: "#4f46e5" },
-  gpu: { label: "Grafikkarte", file: "video-card", icon: "GPU", color: "#10b981" },
-  motherboard: { label: "Mainboard", file: "motherboard", icon: "MB", color: "#f59e0b" },
-  ram: { label: "Arbeitsspeicher", file: "memory", icon: "RAM", color: "#ec4899" },
-  storage: { label: "Speicher", file: "internal-hard-drive", icon: "SSD", color: "#06b6d4" },
-  psu: { label: "Netzteil", file: "power-supply", icon: "PSU", color: "#ef4444" },
-  case: { label: "Gehäuse", file: "case", icon: "CASE", color: "#8b5cf6" }
+  cpu: { label: "Prozessor", file: "cpu", icon: "CPU" },
+  gpu: { label: "Grafikkarte", file: "video-card", icon: "GPU" },
+  motherboard: { label: "Mainboard", file: "motherboard", icon: "MB" },
+  ram: { label: "Arbeitsspeicher", file: "memory", icon: "RAM" },
+  storage: { label: "Speicher", file: "internal-hard-drive", icon: "SSD" },
+  psu: { label: "Netzteil", file: "power-supply", icon: "PSU" },
+  case: { label: "Gehäuse", file: "case", icon: "CASE" }
 };
 
 // Graphics card performance (best card = 100).
