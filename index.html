@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC Builder - Raul Colac</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo"><span class="logo-box">PC</span> Builder</a>
+      <div class="progress">
+        <span id="progressText">0 von 7 Teilen</span>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+
+    <div class="container hero-content">
+      <h1>
+        <span class="word" style="animation-delay: 0.1s">Bau</span>
+        <span class="word" style="animation-delay: 0.2s">deinen</span>
+        <span class="word" style="animation-delay: 0.3s">eigenen</span>
+        <br>
+        <span class="typed" id="typed"></span><span class="cursor">|</span>
+      </h1>
+      <p class="hero-text">Durchsuche tausende echte PC-Teile, prüfe ob alles zusammenpasst und sieh, wie viele FPS du in Spielen bekommst.</p>
+
+      <div class="hero-stats">
+        <div class="hero-stat" style="animation-delay: 0.6s">
+          <b class="count" data-count="30000">0</b>
+          <span>PC-Teile</span>
+        </div>
+        <div class="hero-stat" style="animation-delay: 0.75s">
+          <b class="count" data-count="7">0</b>
+          <span>Kategorien</span>
+        </div>
+        <div class="hero-stat" style="animation-delay: 0.9s">
+          <b class="count" data-count="6">0</b>
+          <span>Spiele</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="container layout">
+
+    <!-- Categories -->
+    <aside class="panel categories">
+      <h2>Dein PC</h2>
+      <div id="categoryList"></div>
+      <button class="btn-reset" id="resetBtn">Alles zurücksetzen</button>
+    </aside>
+
+    <!-- Parts -->
+    <section class="shop" id="shop">
+      <h2 id="shopTitle">Prozessor auswählen</h2>
+
+      <div class="filters">
+        <input type="text" id="search" class="search" placeholder="Suchen, z. B. RTX 4070 oder Ryzen 7 ...">
+      </div>
+
+      <div class="filters">
+        <select id="sort" class="filter-select">
+          <option value="popular">Beliebt</option>
+          <option value="value">Beste Preis-Leistung</option>
+          <option value="performance">Höchste Leistung</option>
+          <option value="priceLow">Preis aufsteigend</option>
+          <option value="priceHigh">Preis absteigend</option>
+        </select>
+        <input type="number" id="maxPrice" class="filter-input" placeholder="Max. Preis in $" min="0">
+        <label class="checkbox">
+          <input type="checkbox" id="onlyCompatible">
+          Nur passende Teile
+        </label>
+      </div>
+
+      <p class="result-info" id="resultInfo"></p>
+      <div class="part-list" id="partList"></div>
+    </section>
+
+    <!-- Summary -->
+    <aside class="panel summary">
+      <h2>Ergebnis</h2>
+      <div class="score-ring" id="scoreRing">
+        <div class="score-inner">
+          <b id="score">-</b>
+          <span>von 100</span>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat stat-price"><span>Preis</span><b id="totalPrice">$0</b></div>
+        <div class="stat stat-power"><span>Verbrauch</span><b id="power">80 W</b></div>
+      </div>
+
+      <div id="messages"></div>
+
+      <div class="fps-header">
+        <h3>Geschätzte FPS</h3>
+        <select id="resolution" class="select">
+          <option value="1080p">1080p</option>
+          <option value="1440p">1440p</option>
+          <option value="4K">4K</option>
+        </select>
+      </div>
+      <div id="fpsList"></div>
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p>© 2026 Raul Constantin Colac · Leistung und FPS sind Schätzungen</p>
+      <p>Daten: <a href="https://github.com/docyx/pc-part-dataset" target="_blank">pc-part-dataset</a></p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
